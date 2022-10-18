@@ -9,7 +9,8 @@
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1140px;
+    padding: 0 15px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -18,8 +19,7 @@
 
 
 .header-banner {
-    background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url(../img/bannerback.png) no-repeat;
-    background-size: 100%;
+    background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url(../img/bannerback.png) no-repeat center/cover;
 }
 
 .header {
@@ -205,21 +205,21 @@
     border-radius: 15px;
 }
 
-.softimg__link {
+.software__IMG {
     position: relative;
 }
 
-.softimg__link::before {
+.softimg__link {
     position: absolute;
-    content: "";
     background: url(../img/PlayButton.svg);
     width: 66px;
     height: 66px;
-    right: 520px;
+    right: 412px;
+    top: 122.5px;
     transition: 0.3s
 }
 
-.softimg__link:hover::before {
+.softimg__link:hover {
     transform: rotate(360deg)
 }
 
@@ -251,6 +251,8 @@
     gap: 30px;
     align-items: center;
     margin-top: 75px;
+    flex-wrap: wrap;
+    justify-content: center
 }
 
 .card {
@@ -326,7 +328,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 90px
+    gap: 90px;
+    flex-wrap: wrap;
 }
 
 .group {
@@ -412,6 +415,8 @@
     display: flex;
     gap: 125px;
     padding: 95px 0;
+    justify-content: center;
+    align-items: center
 }
 
 .focus__h2 {
@@ -514,9 +519,11 @@
     line-height: 19px;
     outline: none;
 }
+
 .search::placeholder {
-    color: rgb(137,147,161);
+    color: rgb(137, 147, 161);
 }
+
 .right__names {
     display: flex;
     gap: 30px
@@ -545,74 +552,271 @@
     border: 1.5px solid #ED4C5C;
     border-radius: 6px;
     cursor: pointer;
-    
+
 }
 
-.submit:hover{
+.submit:hover {
     transform: scale(1.02)
 }
 
-.service{
+.service {
     position: relative;
     cursor: pointer;
     text-align: left;
     background: #fff;
-    color: rgb(137,147,161);
+    color: rgb(137, 147, 161);
 
 }
-.service::after{
+
+.service::after {
     content: "";
     position: absolute;
     background: url(../img/servicesarrow.svg);
-    width: 14px;     
+    width: 14px;
     height: 8px;
-    left: 500px;  
-    top: 26px; 
+    right: 20px;
+    top: 26px;
 }
 
 
 
 
-.foot{
+.foot {
     background: #fafafa;
     padding-top: 85px;
     padding-bottom: 105px;
 }
 
-.foot__wrap{
+.foot__wrap {
     display: flex;
     justify-content: space-between;
 }
 
-.foot__h3{
+.foot__h3 {
     font-family: 'Lato-b';
-font-size: 18px;
-line-height: 22px;
-padding-bottom: 33px;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 33px;
 }
 
-.foot__txt{
+.foot__txt {
     font-family: 'Lato-r';
-font-size: 12px;
-line-height: 18px;
-text-align: left;
-color: #101010;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    color: #101010;
 }
 
-.serv__link:hover{
+.serv__link:hover {
     color: black
 }
 
-.get__num{
+.get__num {
     padding-top: 11px;
     padding-bottom: 21px;
 }
 
-.get__img{
+.get__img {
     display: flex;
     gap: 16px
 }
 
-.foot__cop{
+.foot__cop {
     padding-bottom: 86px;
+}
+
+
+@media screen and (max-width:1139px) {
+    .card3 {
+        margin-top: 60px;
+    }
+
+    .focus__wrap {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 30px
+    }
+
+    .group {
+        flex-basis: 28%
+    }
+
+    .software__wrap {
+        flex-direction: column-reverse;
+    }
+
+    .softimg__link {
+        right: 189.5px;
+        top: 122.5px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lang-btn {
+        margin-right: -55px;
+    }
+
+    .contacts__wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding-top: 120px;
+    }
+
+    .contacts__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .foot__wrap {
+        flex-wrap: wrap
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .foot__card {
+        flex-basis: 34%
+    }
+
+    .features__cards {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .card3 {
+        margin-top: 0;
+    }
+
+    .focus__img {
+        width: 300px;
+        height: 100%;
+    }
+
+    .slider::before {
+        height: 180px;
+        background-repeat: no-repeat;
+        width: 100px;
+        left: -25px;
+        top: 13px;
+    }
+
+    .slider::after {
+        background-repeat: no-repeat;
+        height: 180px;
+        width: 100px;
+        right: -25px;
+        top: 13px;
+    }
+
+}
+
+@media screen and (max-width:584px) {
+    .search {
+        padding: 19px 0;
+        padding-left: 13px;
+    }
+
+    .name {
+        height: 60px;
+        width: 120px;
+    }
+
+    .bottom__input {
+        height: 60px;
+        width: 270px;
+    }
+
+    .banner__title {
+        font-size: 50px
+    }
+
+    .banner__subtitle {
+        font-size: 20px
+    }
+}
+
+@media screen and (max-width:470px) {
+
+    .features__img {
+        height: 100%;
+        width: 280px;
+    }
+
+    .card__info {
+        padding: 5px;
+        height: 130px;
+        width: 240px;
+        left: 20px;
+        top: 157px;
+    }
+
+    .card__h3 {
+        font-size: 13px
+    }
+
+    .header__menu {
+        gap: 8px;
+    }
+
+    .banner__title {
+        font-size: 35px
+    }
+
+    .banner__subtitle {
+        font-size: 17px;
+        line-height: 22px
+    }
+
+    .soft__img {
+        height: 100%;
+        width: 300px;
+    }
+
+    .softimg__link {
+        right: 117px;
+        top: 72px;
+    }
+
+    .header__link {
+        font-size: 10px
+    }
+    
+    .card__txt {
+        padding: 14px 0 14px;
+    }
+    
+    .focus__img {
+        width: 250px;
+        height: 100%;
+    }
+
+    .slider::before {
+        height: 150px;
+        width: 100px;
+        left: -25px;
+        top: 13px;
+    }
+
+    .slider::after {
+        height: 150px;
+        width: 100px;
+        right: -25px;
+        top: 13px;
+    }
+    
+    .foot__wrap{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        margin-left: 40px;
+    }
 }
